@@ -1,0 +1,453 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+.main-head {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: url(/images/backgrounds/IMG_5200.JPG) no-repeat center/cover ;
+  color: rgb(41, 41, 41);
+  font-family: 'vicky-christina';
+  transition: all linear 2s;
+}
+
+body {
+  background: linear-gradient(90deg, #f0dc82, #b6a7f0)
+}
+
+h1 {
+  font-size: 30px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  font-family: 'MuseoModerno';
+}
+
+.test-heading {
+  color: white;
+}
+
+.main-head > span {
+  transition: all 2s;
+}
+
+.main-head:hover > h1 {
+  box-shadow:   0 0 60px 20px #fff,  /* inner white */
+  0 0 80px 10px rgb(34, 0, 255), /* middle magenta */
+  0 0 140px 50px rgb(179, 162, 255); /* outer cyan */
+  transition: all linear 1s;
+  font-family: 'MuseoModerno';
+}
+
+.main-head:hover > .icon-img {
+  animation: jello;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+
+  box-shadow:
+  inset 0 0 50px #fff,      /* inner white */
+  inset 20px 0 80px rgba(255, 213, 0, 0.197),   /* inner left magenta short */
+  inset -20px 0 80px #0ff,  /* inner right cyan short */
+  inset 20px 0 300px #f0f,  /* inner left magenta broad */
+  inset -20px 0 300px #0ff, /* inner right cyan broad */
+  0 0 50px #fff,            /* outer white */
+  -10px 0 80px #f0f,        /* outer left magenta */
+  10px 0 80px #0ff;         /* outer right cyan */
+}
+
+.icon-img {
+  width: 90px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.497);
+  z-index: 5;
+  transition: all linear 2s;
+}
+
+h2 {
+  font-size: 40px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color:rgb(42, 42, 42);
+  /* font-family: 'vicky-christina'; */
+  font-family: 'MuseoModerno';
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+body > #navbar-id {
+  border: none;
+  outline: none;
+
+  backdrop-filter: blur(21px) saturate(171%);
+  -webkit-backdrop-filter: blur(21px) saturate(171%);
+  background-color: rgba(255, 255, 255, 0.79);
+  /* border: 1px solid rgba(243, 245, 249, 0.838); */
+
+}
+
+.nav-item > a {
+  /* margin: 10px; */
+  text-align: center;
+}
+
+.navbar-nav > .nav-item > .active {
+  border-top: 5px solid rgb(33, 17, 255);
+}
+
+/* toggler */
+ 
+.hamburger__toggle{
+  display:block;
+  position: relative;
+  background-color:#c4a0f9;
+  width: 60px; 
+  height: 60px; 
+  margin:50px auto;
+  border-radius:50%;
+  border:none;
+}
+
+/* give the span element and related pseudo-elements the appearance of white lines */
+.hamburger__icon,
+.hamburger__icon::before,
+.hamburger__icon::after {
+  position: absolute;
+  width: 30px; 
+  height: 2px;
+  border-radius: 4px;
+  background-color: white;
+}
+
+/* center the span element in the middle of its containing button */
+.hamburger__icon {
+  top: calc(50% - 2px);
+  left: calc(50% - 15px);
+}
+
+/* position the two pseudo-elements to the very left */
+.hamburger__icon::before,
+.hamburger__icon::after {
+  content: "";
+  left: 0;
+}
+
+/* this is the top dash of the hamburger */
+.hamburger__icon::before {
+  bottom: 8px;
+}
+
+/* this is the bottom dash of the hamburger */
+.hamburger__icon::after {
+  top: 8px;
+}
+
+/* HOVER STYLES ON THE BUTTON */
+
+/* rotate middle dash of hamburger */
+.hamburger__toggle:hover .hamburger__icon {
+  height: 5px;
+  width: 54px;
+  left: 5px;
+  top: calc(50% - 2px);
+  transform: rotate(-45deg);
+  background-color: rgb(248, 255, 196);
+}
+
+/* rotate bottom dash of hamburger counter clockwise */
+.hamburger__toggle:hover .hamburger__icon::after {
+  width: 54px;
+  height: 5px;
+  top: -1px;
+  transform: rotate(-270deg);
+  background-color: rgb(221, 255, 0);
+}
+
+/* hide the top dash by scaling it to 0 */
+.hamburger__toggle:hover .hamburger__icon::before {
+  transform: scale(0);
+}
+
+/* TRANSITION */
+/* adjust duration to see it happen slower */
+.hamburger__icon, .hamburger__icon::after {
+  transition: all 0.3s linear;
+}
+
+/* end of toggler */
+
+.instructions {
+  font-family: 'Inter';
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 12px;
+  text-align: center;
+  line-height: 2.8;
+  color: rgb(68, 67, 67);
+  margin: 0;
+}
+
+.instr-box {
+  max-width: 35rem;
+  padding: 20px;
+  border: 1px solid rgb(255, 248, 248);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(21px) saturate(171%);
+  -webkit-backdrop-filter: blur(21px) saturate(171%);
+  background-color: rgba(255, 255, 255, 0.444);
+  border-image: linear-gradient(45deg, rgb(213, 249, 194), rgb(255, 236, 111)) 1;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px;
+}
+
+.drink-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* nav-bar */
+.nav-link, #navbarDropdown, .navbar-dark .navbar-nav .nav-link {
+  color:rgb(56, 55, 59);
+  border-top: 5px solid rgba(255, 249, 133, 0);
+  transition: all 1.2s;
+  padding: 5px;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-link:hover, #navbarDropdown:hover, .navbar-dark .navbar-nav .nav-link:hover, .nav-link:hover {
+  color:rgb(134, 134, 134);
+}
+
+.home, .all-drinks, .random, .list {
+  margin: 10px;
+}
+
+/*Carousel*/
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+}
+.carousel {
+  width: 20rem;
+  margin: 20px;
+}
+
+.carousel-item > img {
+  opacity: 0.5;
+  transition: opacity 2s, transform 5s;
+}
+
+.carousel-item > img:hover {
+  opacity: 1;
+  transform: scale(1.3);
+}
+
+/* img */
+.drink-img {
+  width: 20rem;
+  margin: 20px;
+  border-radius: 50%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+/* button */
+
+.btn {
+  color: rgb(37, 37, 37);
+  padding: 5px;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: rgb(223, 222, 243);
+  margin: 20px;
+}
+
+.btn > span {
+  font-family: 'MuseoModerno';
+  letter-spacing: 1px;
+  padding: 20px;
+  font-weight: 700;
+}
+
+.btn:hover {
+  color: rgb(89, 82, 82);
+  background-color: rgba(233, 227, 168, 0.411);
+}
+
+.btn:focus {
+  color: rgb(48, 48, 48);
+  background-color: rgb(57, 57, 57);
+  border: none;
+  outline: none;
+  background-color: none;
+}
+
+/* input */
+
+.d-flex {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  backdrop-filter: blur(21px) saturate(171%);
+  -webkit-backdrop-filter: blur(21px) saturate(171%);
+  background-color: rgba(255, 255, 255, 0.327);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  height: 100%;
+}
+
+.input-area {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+a, input[placeholder], .list-of-ul, span {
+  font-family: 'Inter';
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+input[placeholder] {
+  font-size: 12px;
+}
+
+.form-control {
+  width: 330px;
+}
+
+.search-icon {
+  width: 45px;
+}
+
+.search-bar {
+  border-radius: 10px;
+  border: none;
+  width: 240px;
+  height: 35px;
+  padding: 30px;
+  margin: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+/* alphabet */
+.alph {
+  text-decoration: none;
+  color: white;
+  margin-top: 25px;
+  padding: 10px;
+}
+
+.alph-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* ingredients */
+
+.first-ingredient, #ingredient-list {
+  color: white;
+}
+
+
+.ingr-descr {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.name-of-drink {
+  border-bottom: 2px solid rgb(221, 248, 141);
+}
+
+li.nav-item > a.nav-link.current-page {
+  color: rgb(238, 119, 0);
+  font-weight: 800;
+}
+
+#id-ingredient-list > li {
+  color: rgb(252, 255, 172);
+  padding: 20px;
+  font-size: 15px;
+  text-align: center;
+  list-style: none;
+}
+
+#id-ingredient-list > li::marker {
+  color:rgb(210, 253, 93);
+}
+
+#id-ingredient-list > li:hover {
+  transform: scale(1.2);
+  transition: all 2s;
+}
+
+.list-of-ingredient {
+  color: rgb(28, 28, 28);
+  font-size: 15px;
+  text-align: center;
+  font-weight: 700;
+}
+
+#find-drink {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.check-search {
+  color: rgb(49, 49, 49);
+}
+
+/* footer */
+
+footer, .end {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer {
+  background-color: #b6a7f058;
+  height: 200px;
+}
+
+.end {
+  padding: 20px;
+}
+
+.footer-span {
+  font-family: 'MuseoModerno';
+  font-weight: 500;
+  color: white;
+  margin-top: 10px;
+}
+
+.footer-img {
+  width: 80px;
+}
