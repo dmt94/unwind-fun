@@ -4,7 +4,6 @@ h1 {
 
 .all-drinks-choice {
   max-width: 100%;
-  height: 100px;
   background-color: rgba(86, 86, 86, 0.137);
   display: flex;
   justify-content: center;
@@ -14,9 +13,10 @@ h1 {
 /*Buttons*/
 
 .alcoholic-btn, .nonalcoholic-btn {
-  border: 1px solid rgb(255, 255, 208);
+  border: 1px solid rgba(255, 255, 208, 0);
   background-color: rgba(0, 0, 0, 0);
   color: white;
+  padding: 15px;
 }
 
 .alcoholic-btn:hover {
@@ -42,7 +42,7 @@ h1 {
 
 /* have JS change class upon click? */
 .chosen-filter {
-  background-color: rgb(255, 248, 48);
+  background-color: rgba(193, 159, 249, 0.584);
   color: rgb(37, 37, 37);
 }
 
@@ -56,7 +56,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 250px;
+    height: 280px;
   }
 }
 
@@ -67,21 +67,27 @@ h1 {
   margin: 20px;
   justify-content: center;
   flex-wrap: wrap;
+  
 }
 
 .card {
   margin: 15px;
   transition: all 2s;
   background-color: rgb(37, 37, 37);
-  outline: 1px solid white;
+  outline: 1px solid rgba(255, 255, 255, 0.226);
+  backdrop-filter: blur(15px) saturate(180%);
+  -webkit-backdrop-filter: blur(15px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.51);
+  border: 1px solid rgba(209, 213, 219, 0.3);
 }
 
 .card-body {
-  background-color:rgb(232, 255, 192);
+  background-color:rgba(211, 192, 255, 0.109);
+
 }
 
 .card:hover {
-  box-shadow: 5px 3px 3px 2px #000000d6;
+  /* box-shadow: 5px 3px 3px 2px #000000d6; */
   transform: scale(1.1);
   transition: all 2s;
 }
@@ -110,14 +116,14 @@ h5.drink-title:hover {
   font-size: 12px;
   text-align: center;
   padding: 5px;
-  color: white;
+  color: rgb(47, 47, 47);
 }
 
 .drink-glass {
   font-size: 9px;
   text-align: center;
   padding: 5px;
-  color: white;
+  color: rgb(47, 47, 47);
 }
 
 .drink-link {
